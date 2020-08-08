@@ -8,6 +8,7 @@ import Register from "../auth/Register";
 import FileUtils from "../dashboard/FileUtils";
 import Property from "../dashboard/Property";
 import PDFExample from "../dashboard/PDFExample";
+import Chart from "../dashboard/Chart";
 import NotFound from "../layout/NotFound";
 
 const Routes = () => {
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <PrivateRoute exact path="/fileUtils" component={FileUtils} />
+        <PrivateRoute exact path="/charts" component={Chart} />
         <PrivateRoute exact path="/pdfGeneration" component={PDFExample} />
         <PrivateRoute component={NotFound} />
       </Switch>
